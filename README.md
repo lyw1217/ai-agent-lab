@@ -63,6 +63,7 @@ GitHub 레포에 결과 정리
 - 산출물: GitHub 레포에 간단한 기록
 - 역할 분담: 없음
 - 각자 관심 있는 도구나 workflow를 자유롭게 실험
+- 작업 방식: 각자 브랜치에서 기록 후 `main`으로 PR
 
 ## 매주 진행 예시
 
@@ -169,6 +170,32 @@ ai-agent-lab/
 2. 재사용할 만한 사용 순서가 생기면 `templates/workflow.md`를 복사해 `workflows/`에 정리합니다.
 3. 도구를 비교했다면 `templates/tool-comparison.md`를 복사해 `comparisons/`에 남깁니다.
 4. 좋은 prompt나 command는 `prompts/`에 짧게라도 추가합니다.
+
+## GitHub 작업 방식
+
+각자 자신의 브랜치에서 실험 기록, prompt, workflow를 작성한 뒤 `main`으로 PR을 보냅니다.
+
+| 참여자 | 브랜치 |
+|---|---|
+| lyw | `lyw` |
+| oht | `oht` |
+| bth | `bth` |
+
+기본 흐름:
+
+```bash
+git checkout main
+git pull
+git checkout lyw
+git merge main
+
+# 기록 작성 후
+git add .
+git commit -m "Add experiment note"
+git push origin lyw
+```
+
+PR은 발표자료가 아니라 공유와 코멘트를 위한 공간으로 사용합니다.
 
 ## 최종 산출물
 
